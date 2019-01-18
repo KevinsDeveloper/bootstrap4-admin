@@ -1,0 +1,27 @@
+/*!
+ * Start Bootstrap - SB Admin 2 v3.3.7+1 (http://startbootstrap.com/template-overviews/sb-admin-2)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+.skin-blue .navbar-top {
+  background-color: #337ab7;
+  color: #fff;
+}
+.skin-blue .navbar-top .dropdown .dropdown-toggle {
+  color: #fff;
+  font-size: 16px;
+}
+.skin-blue .navbar-top .dropdown .dropdown-toggle:hover,
+.skin-blue .navbar-top .dropdown .dropdown-toggle:focus {
+  background-color: #2d6da2;
+}
+.skin-blue .navbar-top .navbar-brand {
+  background-color: #2d6da2;
+  color: #fff;
+  width: 251px;
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  background-color: #2d6da2;
+}

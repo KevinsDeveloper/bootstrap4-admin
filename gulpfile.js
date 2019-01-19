@@ -32,7 +32,7 @@ gulp.task('less', function () {
 });
 
 gulp.task('css', function () {
-    return gulp.src(['vendor/layer/theme/default/layer.css'])
+    return gulp.src(['vendor/metisMenu/metisMenu.min.css', 'vendor/font-awesome/css/font-awesome.min.css', 'vendor/layer/theme/default/layer.css'])
         .pipe(concat('extend.css'))
         //.pipe(uglify())
         .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -141,7 +141,7 @@ gulp.task('browserSync', function () {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'css','minify-css', 'js', 'base-js', 'minify-js'], function () {
+gulp.task('dev', ['browserSync', 'less', 'css', 'minify-css', 'js', 'base-js', 'minify-js'], function () {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('dist/css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);

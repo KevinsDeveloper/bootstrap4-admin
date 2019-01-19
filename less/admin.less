@@ -50,7 +50,12 @@ body a:hover,body a:focus {color: #337ab7;}
     padding: 13px 20px;
     min-height: 50px;
 }
-
+.navbar-top-links .dropdown-menu .title{
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 5px 10px;
+}
 .navbar-top-links .dropdown-menu li {
     display: block;
 }
@@ -64,6 +69,18 @@ body a:hover,body a:focus {color: #337ab7;}
     min-height: 0;
 }
 
+.navbar-top-links .dropdown-menu .mini a{
+    width: 120px;
+    float: left;
+    clear: none;
+    padding: 3px 5px;
+    margin: 0px 5px 0px 15px;
+}
+
+.dropdown-menu .mini>a:focus, .dropdown-menu .mini>a:hover {
+    background-color: none;
+}
+
 .navbar-top-links .dropdown-menu li a div {
     white-space: normal;
 }
@@ -71,7 +88,7 @@ body a:hover,body a:focus {color: #337ab7;}
 .navbar-top-links .dropdown-messages,
 .navbar-top-links .dropdown-tasks,
 .navbar-top-links .dropdown-alerts {
-    width: 310px;
+    width: 430px;
     min-width: 0;
 }
 
@@ -253,6 +270,7 @@ body a:hover,body a:focus {color: #337ab7;}
 .login-body .login-panel-body {padding: 25px 25px 10px 25px;}
 .login-body .panel-footer{padding: 20px; background: #fff; border-color: #e8eaec;}
 .login-body .panel-footer .copyright {padding-top: 10px; font-size: 80%; color: #808695;}
+.login-body .login-tips {font-size: 80%;}
 // Flot Charts Containers
 
 .flot-chart {

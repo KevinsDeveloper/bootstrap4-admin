@@ -1,11 +1,13 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -17,8 +19,10 @@ var banner = ['/*!\n',
 ].join('');
 
 // Compile LESS files from /less into /css
-gulp.task('less', function() {
-    return gulp.src(['less/admin.less','less/skin-blue.less'])
+gulp.task('less', function () {
+    return gulp.src(['less/admin.less', 'less/skin-blue.less'])
+        .pipe(concat('app.css'))
+        //.pipe(uglify())
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('dist/css'))
@@ -27,9 +31,21 @@ gulp.task('less', function() {
         }))
 });
 
+gulp.task('css', function () {
+    return gulp.src(['vendor/layer/theme/default/layer.css'])
+        .pipe(concat('extend.css'))
+        //.pipe(uglify())
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
 // Minify compiled CSS
-gulp.task('minify-css', ['less'], function() {
-    return gulp.src(['dist/css/admin.css', 'dist/css/skin-blue.css'])
+gulp.task('minify-css', ['less'], function () {
+    return gulp.src(['dist/css/app.css'])
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/css'))
@@ -39,8 +55,20 @@ gulp.task('minify-css', ['less'], function() {
 });
 
 // Copy JS to dist
-gulp.task('js', function() {
-    return gulp.src(['js/admin.js'])
+gulp.task('js', function () {
+    return gulp.src(['js/require.js', 'js/require-main.js', 'js/fast.js'])
+        .pipe(uglify())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+})
+
+gulp.task('base-js', function () {
+    return gulp.src(['vendor/metisMenu/metisMenu.js', 'vendor/layer/layer.js', 'js/base.js'])
+        .pipe(concat('base.js'))
+        .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.reload({
@@ -49,11 +77,11 @@ gulp.task('js', function() {
 })
 
 // Minify JS
-gulp.task('minify-js', ['js'], function() {
-    return gulp.src('js/admin.js')
+gulp.task('minify-js', ['js'], function () {
+    return gulp.src(['js/require.js', 'js/require-main.js', 'js/fast.js'])
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(rename({ suffix: '.min' }))
+        //.pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.reload({
             stream: true
@@ -61,7 +89,7 @@ gulp.task('minify-js', ['js'], function() {
 });
 
 // Copy vendor libraries from /bower_components into /vendor
-gulp.task('copy', function() {
+gulp.task('copy', function () {
     gulp.src(['bower_components/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('vendor/bootstrap'))
 
@@ -104,7 +132,7 @@ gulp.task('copy', function() {
 gulp.task('default', ['minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
     browserSync.init({
         server: {
             baseDir: ''
@@ -113,7 +141,7 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'js', 'minify-js'], function() {
+gulp.task('dev', ['browserSync', 'less', 'css','minify-css', 'js', 'base-js', 'minify-js'], function () {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('dist/css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);

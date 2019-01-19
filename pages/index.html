@@ -17,9 +17,9 @@
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../dist/css/admin.css" rel="stylesheet">
+    <link href="../dist/css/app.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="../dist/css/skin-blue.css" rel="stylesheet">
+    <link href="../dist/css/extend.min.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
     <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
@@ -51,40 +51,34 @@
             </div>
             <ul class="nav navbar-top-links navbar-left" role="tablist">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-hover="dropdown">
-                        <i class="fa fa-home"></i> <span>首页</span> 
-                        <!-- <i class="fa fa-caret-down"></i> -->
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
+                    <a href="#" class="dropdown-toggle"><i class="fa fa-home"></i> <span>首页</span></a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-hover="dropdown">
                             <i class="fa fa-cubes"></i> <span>订单</span> 
                         </a>
-                        <ul class="dropdown-menu dropdown-messages">
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <strong>John Smith</strong>
-                                        <span class="pull-right text-muted">
-                                            <em>Yesterday</em>
-                                        </span>
-                                    </div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                                </a>
+                        <ul class="dropdown-menu dropdown-tasks">
+                            <div class="title">订单管理</div>
+                            <li class="mini clearfix">
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            </li>
+                            <div class="title">订单管理</div>
+                            <li class="mini clearfix">
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-messages -->
@@ -237,7 +231,7 @@
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 控制台</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -275,36 +269,6 @@
                                 </li>
                                 <li>
                                     <a href="grid.html"><i class="fa fa-chevron-right"></i> Grid</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /.nav-third-level -->
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -686,23 +650,25 @@
 
     </div>
     <!-- /#wrapper -->
+    <script src="../dist/js/require.js" data-main="../dist/js/require-main.js"></script>
 
     <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+    <!-- <script src="../vendor/jquery/jquery.min.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="../vendor/bootstrap/js/bootstrap.min.js"></script> -->
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- <script src="../vendor/metisMenu/metisMenu.min.js"></script> -->
+    <!-- Custom Theme JavaScript -->
+    <!-- <script src="../dist/js/admin.js"></script> -->
 
     <!-- Morris Charts JavaScript -->
-    <script src="../vendor/raphael/raphael.min.js"></script>
-    <script src="../vendor/morrisjs/morris.min.js"></script>
-    <script src="../data/morris-data.js"></script>
+    <!-- <script src="../vendor/raphael/raphael.min.js"></script> -->
+    <!-- <script src="../vendor/morrisjs/morris.min.js"></script> -->
+    <!-- <script src="../data/morris-data.js"></script> -->
 
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/admin.js"></script>
+    
 </body>
 
 </html>

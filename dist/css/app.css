@@ -43,6 +43,12 @@ body a:focus {
   padding: 13px 20px;
   min-height: 50px;
 }
+.navbar-top-links .dropdown-menu .title {
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 5px 10px;
+}
 .navbar-top-links .dropdown-menu li {
   display: block;
 }
@@ -53,13 +59,24 @@ body a:focus {
   padding: 3px 20px;
   min-height: 0;
 }
+.navbar-top-links .dropdown-menu .mini a {
+  width: 120px;
+  float: left;
+  clear: none;
+  padding: 3px 5px;
+  margin: 0px 5px 0px 15px;
+}
+.dropdown-menu .mini > a:focus,
+.dropdown-menu .mini > a:hover {
+  background-color: none;
+}
 .navbar-top-links .dropdown-menu li a div {
   white-space: normal;
 }
 .navbar-top-links .dropdown-messages,
 .navbar-top-links .dropdown-tasks,
 .navbar-top-links .dropdown-alerts {
-  width: 310px;
+  width: 430px;
   min-width: 0;
 }
 .navbar-top-links .dropdown-messages {
@@ -212,6 +229,9 @@ body a:focus {
   padding-top: 10px;
   font-size: 80%;
   color: #808695;
+}
+.login-body .login-tips {
+  font-size: 80%;
 }
 .flot-chart {
   display: block;
@@ -502,4 +522,26 @@ table.dataTable thead .sorting:after {
   list-style: none;
   background-color: #fff;
   border-radius: 4px;
+}
+.skin-blue .navbar-top {
+  background-color: #337ab7;
+  color: #fff;
+}
+.skin-blue .navbar-top .dropdown .dropdown-toggle {
+  color: #fff;
+  font-size: 16px;
+}
+.skin-blue .navbar-top .dropdown .dropdown-toggle:hover,
+.skin-blue .navbar-top .dropdown .dropdown-toggle:focus {
+  background-color: #2d6da2;
+}
+.skin-blue .navbar-top .navbar-brand {
+  background-color: #2d6da2;
+  color: #fff;
+  width: 251px;
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  background-color: #2d6da2;
 }

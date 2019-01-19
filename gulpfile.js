@@ -126,6 +126,8 @@ gulp.task('copy', function () {
     gulp.src(['bower_components/raphael/raphael.js', 'bower_components/raphael/raphael.min.js'])
         .pipe(gulp.dest('vendor/raphael'))
 
+    gulp.src(['vendor/font-awesome/fonts/*'])
+        .pipe(gulp.dest('dist/fonts'))
 })
 
 // Run everything

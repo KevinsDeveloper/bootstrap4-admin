@@ -538,10 +538,22 @@ table.dataTable thead .sorting:after {
 .skin-blue .navbar-top .navbar-brand {
   background-color: #2d6da2;
   color: #fff;
-  width: 251px;
 }
 .nav .open > a,
 .nav .open > a:focus,
 .nav .open > a:hover {
   background-color: #2d6da2;
+}
+@media (min-width: 768px) {
+  .skin-blue .navbar-top .navbar-brand {
+    width: 251px;
+  }
+}
+@media (max-width: 768px) {
+  .skin-blue .navbar-header {
+    display: none;
+  }
+  .skin-blue .navbar-right {
+    display: none;
+  }
 }

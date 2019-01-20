@@ -25,6 +25,8 @@ require.config({
         // 以下的包从bower的libs目录加载
         'jquery': '../../vendor/jquery/jquery.min',
         'bootstrap': '../../vendor/bootstrap/js/bootstrap.min',
+        'raphael': '../../vendor/raphael/raphael.min',
+        'morris': '../../vendor/morrisjs/morris.min',
     },
     // shim依赖配置
     shim: {

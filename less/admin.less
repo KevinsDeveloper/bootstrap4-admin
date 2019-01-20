@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins.less";
+@import "lte.less";
 
 // Global Styles
 
@@ -18,15 +19,15 @@ body a:hover,body a:focus {color: #337ab7;}
 
 #page-wrapper {
     padding: 0 15px;
-    min-height: 568px;
+    //min-height: 780px;
     background-color: white;
 }
 
 @media(min-width:768px) {
     #page-wrapper {
         position: inherit;
-        margin: 0 0 0 250px;
-        padding: 0 20px;
+        margin: 0 0 0 240px;
+        padding: 0 10px;
         border-left: 1px solid darken(@gray-lightest, 6.5%);
     }
 }
@@ -163,7 +164,7 @@ body a:hover,body a:focus {color: #337ab7;}
     .sidebar {
         z-index: 1;
         position: absolute;
-        width: 250px;
+        width: 240px;
         margin-top: 51px;
     }
 
@@ -413,16 +414,6 @@ table.dataTable thead .sorting:after {
     list-style: none;
 }
 
-.timeline:before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 3px;
-    margin-left: -1.5px;
-    background-color: #eeeeee;
-}
 
 .timeline > li {
     position: relative;

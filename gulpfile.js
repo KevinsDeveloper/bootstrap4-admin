@@ -32,7 +32,12 @@ gulp.task('less', function () {
 });
 
 gulp.task('css', function () {
-    return gulp.src(['vendor/metisMenu/metisMenu.min.css', 'vendor/font-awesome/css/font-awesome.min.css', 'vendor/layer/theme/default/layer.css'])
+    return gulp.src([
+        'vendor/metisMenu/metisMenu.min.css', 
+        'vendor/morrisjs/morris.css',
+        'vendor/font-awesome/css/font-awesome.min.css', 
+        'vendor/layer/theme/default/layer.css'
+        ])
         .pipe(concat('extend.css'))
         //.pipe(uglify())
         .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -66,7 +71,14 @@ gulp.task('js', function () {
 })
 
 gulp.task('base-js', function () {
-    return gulp.src(['vendor/metisMenu/metisMenu.js', 'vendor/layer/layer.js', 'js/base.js'])
+    return gulp.src([
+        'vendor/metisMenu/metisMenu.js', 
+        // 'vendor/raphael/raphael.min.js',
+        // 'vendor/morrisjs/morris.min.js',
+        'vendor/layer/layer.js', 
+        'js/base.js',
+        // 'data/morris-data.js'
+        ])
         .pipe(concat('base.js'))
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))

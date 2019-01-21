@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,20 +11,10 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
-    <link href="../dist/css/admin.css" rel="stylesheet">
+    <link href="../dist/css/app.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="../dist/css/skin-blue.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../dist/css/extend.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +22,41 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script type="text/javascript">
+        var require = {
+            config: {
+                "site": {
+                    "name": "BootstrapAdmin",
+                    "cdnurl": "",
+                    "version": "1.0.1",
+                    "timezone": "Asia\/Shanghai",
+                    "languages": {
+                        "backend": "zh-cn",
+                        "frontend": "zh-cn"
+                    }
+                },
+                "upload": {
+                    "cdnurl": "",
+                    "uploadurl": "ajax\/upload",
+                    "bucket": "local",
+                    "maxsize": "10mb",
+                    "mimetype": "jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx",
+                    "multipart": [],
+                    "multiple": false
+                },
+                "modulename": "index",
+                "controllername": "index",
+                "actionname": "index",
+                "jsname": "module\/index",
+                "moduleurl": "\/admin",
+                "language": "zh-cn",
+                "referer": "\/admin\/dashboard",
+                "__PUBLIC__": "\/",
+                "__ROOT__": "\/",
+                "__CDN__": "https:\/\/cdn.pure.fastadmin.net"
+            }
+        };
+    </script>
 </head>
 
 <body class="skin-blue">
@@ -51,38 +74,38 @@
             </div>
             <ul class="nav navbar-top-links navbar-left" role="tablist">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle"><i class="fa fa-home"></i> <span>首页</span></a>
+                    <a href="index.html" class="dropdown-toggle"><i class="fa fa-home"></i> <span>首页</span></a>
                 </li>
-                <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown">
-                            <i class="fa fa-cubes"></i> <span>订单</span> 
-                        </a>
-                        <ul class="dropdown-menu dropdown-tasks">
-                            <div class="title">订单管理</div>
-                            <li class="mini clearfix">
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                            </li>
-                            <div class="title">订单管理</div>
-                            <li class="mini clearfix">
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-messages -->
-                    </li>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-hover="dropdown">
+                        <i class="fa fa-cubes"></i> <span>订单</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <div class="title">订单管理</div>
+                        <li class="mini clearfix">
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                        </li>
+                        <div class="title">订单管理</div>
+                        <li class="mini clearfix">
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
             </ul>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
@@ -140,7 +163,9 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-bell fa-fw"></i>
+                        <!-- <i class="fa fa-caret-down"></i> -->
+                        <span class="label label-danger">4</span>
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
@@ -203,8 +228,8 @@
                         <img src="../dist/img/avatar5.png" class="user-image" alt="User Image"> 管理员 <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+                        <li><a href="profile.html"><i class="fa fa-user fa-fw"></i> 我的资料</a></li>
+                        <li><a href="setting.html"><i class="fa fa-gear fa-fw"></i> 我的设置</a></li>
                         <li class="divider"></li>
                         <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
                     </ul>
@@ -231,7 +256,7 @@
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 控制台</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -269,36 +294,6 @@
                                 </li>
                                 <li>
                                     <a href="grid.html"><i class="fa fa-chevron-right"></i> Grid</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /.nav-third-level -->
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -517,17 +512,7 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/admin.js"></script>
+    <script src="../dist/js/require.js" data-main="../dist/js/require-main.js"></script>
 
 </body>
 

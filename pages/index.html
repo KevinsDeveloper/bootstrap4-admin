@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +22,41 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script type="text/javascript">
+        var require = {
+            config: {
+                "site": {
+                    "name": "BootstrapAdmin",
+                    "cdnurl": "",
+                    "version": "1.0.1",
+                    "timezone": "Asia\/Shanghai",
+                    "languages": {
+                        "backend": "zh-cn",
+                        "frontend": "zh-cn"
+                    }
+                },
+                "upload": {
+                    "cdnurl": "",
+                    "uploadurl": "ajax\/upload",
+                    "bucket": "local",
+                    "maxsize": "10mb",
+                    "mimetype": "jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx",
+                    "multipart": [],
+                    "multiple": false
+                },
+                "modulename": "index",
+                "controllername": "index",
+                "actionname": "index",
+                "jsname": "module\/index",
+                "moduleurl": "\/admin",
+                "language": "zh-cn",
+                "referer": "\/admin\/dashboard",
+                "__PUBLIC__": "\/",
+                "__ROOT__": "\/",
+                "__CDN__": "https:\/\/cdn.pure.fastadmin.net"
+            }
+        };
+    </script>
 </head>
 
 <body class="skin-blue">
@@ -44,35 +77,35 @@
                     <a href="index.html" class="dropdown-toggle"><i class="fa fa-home"></i> <span>首页</span></a>
                 </li>
                 <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown">
-                            <i class="fa fa-cubes"></i> <span>订单</span> 
-                        </a>
-                        <ul class="dropdown-menu dropdown-tasks">
-                            <div class="title">订单管理</div>
-                            <li class="mini clearfix">
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                            </li>
-                            <div class="title">订单管理</div>
-                            <li class="mini clearfix">
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                                <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-messages -->
-                    </li>
+                    <a href="#" class="dropdown-toggle" data-hover="dropdown">
+                        <i class="fa fa-cubes"></i> <span>订单</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <div class="title">订单管理</div>
+                        <li class="mini clearfix">
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                        </li>
+                        <div class="title">订单管理</div>
+                        <li class="mini clearfix">
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> 订单列表</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
             </ul>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
@@ -130,7 +163,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> 
+                        <i class="fa fa-bell fa-fw"></i>
                         <!-- <i class="fa fa-caret-down"></i> -->
                         <span class="label label-danger">4</span>
                     </a>
@@ -646,5 +679,4 @@
     <!-- /#wrapper -->
     <script src="../dist/js/require.js" data-main="../dist/js/require-main.js"></script>
 </body>
-
 </html>

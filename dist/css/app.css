@@ -3965,6 +3965,7 @@ body a:focus {
 }
 #wrapper {
   width: 100%;
+  overflow-x: hidden;
 }
 #page-wrapper {
   padding: 0 15px;
@@ -4153,7 +4154,6 @@ body a:focus {
   background-size: cover;
 }
 .login-body .login-panel {
-  margin-top: 100%;
   background-color: #fff;
 }
 .login-body .panel-heading {

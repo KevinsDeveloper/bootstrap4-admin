@@ -33,11 +33,11 @@ gulp.task('less', function () {
 
 gulp.task('css', function () {
     return gulp.src([
-        'vendor/metisMenu/metisMenu.min.css', 
+        'vendor/metisMenu/metisMenu.min.css',
         'vendor/morrisjs/morris.css',
-        'vendor/font-awesome/css/font-awesome.min.css', 
+        'vendor/font-awesome/css/font-awesome.min.css',
         'vendor/layer/theme/default/layer.css'
-        ])
+    ])
         .pipe(concat('extend.css'))
         //.pipe(uglify())
         .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -70,15 +70,26 @@ gulp.task('js', function () {
         }))
 })
 
+// Copy JS to dist
+gulp.task('module-js', function () {
+    return gulp.src(['js/module/*'])
+        .pipe(uglify())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(gulp.dest('dist/js/module'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+})
+
 gulp.task('base-js', function () {
     return gulp.src([
-        'vendor/metisMenu/metisMenu.js', 
+        'vendor/metisMenu/metisMenu.js',
         // 'vendor/raphael/raphael.min.js',
         // 'vendor/morrisjs/morris.min.js',
-        'vendor/layer/layer.js', 
+        'vendor/layer/layer.js',
         'js/base.js',
         // 'data/morris-data.js'
-        ])
+    ])
         .pipe(concat('base.js'))
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
@@ -155,7 +166,7 @@ gulp.task('browserSync', function () {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'css', 'minify-css', 'js', 'base-js', 'minify-js'], function () {
+gulp.task('dev', ['browserSync', 'less', 'css', 'minify-css', 'js', 'base-js', 'module-js', 'minify-js'], function () {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('dist/css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);

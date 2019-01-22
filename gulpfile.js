@@ -24,7 +24,7 @@ gulp.task('less', function () {
         .pipe(concat('app.css'))
         //.pipe(uglify())
         .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
+        .pipe(header(banner, {pkg: pkg}))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -40,8 +40,8 @@ gulp.task('css', function () {
     ])
         .pipe(concat('extend.css'))
         //.pipe(uglify())
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -51,8 +51,8 @@ gulp.task('css', function () {
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function () {
     return gulp.src(['dist/css/app.css'])
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -63,7 +63,7 @@ gulp.task('minify-css', ['less'], function () {
 gulp.task('js', function () {
     return gulp.src(['js/require.js', 'js/require-main.js', 'js/fast.js'])
         .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
+        .pipe(header(banner, {pkg: pkg}))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.reload({
             stream: true
@@ -74,7 +74,7 @@ gulp.task('js', function () {
 gulp.task('module-js', function () {
     return gulp.src(['js/module/*'])
         .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
+        .pipe(header(banner, {pkg: pkg}))
         .pipe(gulp.dest('dist/js/module'))
         .pipe(browserSync.reload({
             stream: true
@@ -92,7 +92,7 @@ gulp.task('base-js', function () {
     ])
         .pipe(concat('base.js'))
         .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
+        .pipe(header(banner, {pkg: pkg}))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.reload({
             stream: true
@@ -103,7 +103,7 @@ gulp.task('base-js', function () {
 gulp.task('minify-js', ['js'], function () {
     return gulp.src(['js/require.js', 'js/require-main.js', 'js/fast.js'])
         .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
+        .pipe(header(banner, {pkg: pkg}))
         //.pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.reload({

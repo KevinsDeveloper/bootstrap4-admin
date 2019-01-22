@@ -3965,6 +3965,7 @@ body a:focus {
 }
 #wrapper {
   width: 100%;
+  overflow-x: hidden;
 }
 #page-wrapper {
   padding: 0 15px;

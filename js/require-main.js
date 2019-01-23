@@ -1,5 +1,5 @@
 require.config({
-    urlArgs: "v=",
+    urlArgs: "v=" + requirejs.s.contexts._.config.config.site.version,
     packages: [{
         name: 'moment',
         location: '../libs/moment',
@@ -84,8 +84,8 @@ require(['jquery', 'bootstrap'], function ($, undefined) {
     paths['lang'] = '';
     // 避免目录冲突
     paths['module/'] = 'module/';
-    require.config({ paths: paths });
-    
+    require.config({paths: paths});
+
     // // 初始化
     $(function () {
         require(['fast'], function (Fast) {

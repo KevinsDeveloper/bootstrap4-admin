@@ -4,8 +4,7 @@ require.config({
         name: 'moment',
         location: '../libs/moment',
         main: 'moment'
-    }
-    ],
+    }],
     //在打包压缩时将会把include中的模块合并到主文件中
     include: ['css', 'layer', 'toastr', 'fast'],
     paths: {
@@ -25,8 +24,9 @@ require.config({
         // 以下的包从bower的libs目录加载
         'jquery': '../../vendor/jquery/jquery.min',
         'bootstrap': '../../vendor/bootstrap/js/bootstrap.min',
-        'raphael': '../../vendor/raphael/raphael.min',
-        'morris': '../../vendor/morrisjs/morris.min',
+        //'raphael': '../../vendor/raphael/raphael.min',
+        //'morris': '../../vendor/morrisjs/morris.min',
+        'template': '../../vendor/art-template/lib/template-web',
     },
     // shim依赖配置
     shim: {

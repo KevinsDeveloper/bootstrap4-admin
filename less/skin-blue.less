@@ -3,8 +3,9 @@
 .skin-blue .navbar-top .dropdown .dropdown-toggle:hover, .skin-blue .navbar-top .dropdown .dropdown-toggle:focus {background-color: #2d6da2;}
 .skin-blue .navbar-top .navbar-brand {background-color: #2d6da2; color: #fff;}
 .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {background-color: #2d6da2;}
-@media (min-width: 768px) {
-  .skin-blue .navbar-top .navbar-brand { width: 241px;}
+
+@media (min-width: 1025px) {
+  .skin-blue .navbar-top .navbar-brand { width: 221px;}
 }
 @media (max-width: 768px) {
   .skin-blue .navbar-header {
@@ -13,4 +14,12 @@
   .skin-blue .navbar-right {
     display: none;
   }
+}
+@media (max-width: 1025px) {
+  .navbar-collapse {
+	  display: none;
+  }
+}
+@media (min-width: 768px) {
+	.modal-dialog {margin: 10% auto;}
 }

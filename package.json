@@ -1,8 +1,8 @@
 {
-  "name": "startbootstrap-sb-admin-2",
-  "title": "SB Admin 2",
+  "name": "Bootstrap4",
+  "title": "Admin",
   "version": "3.3.7+1",
-  "homepage": "http://startbootstrap.com/template-overviews/sb-admin-2",
+  "homepage": "https://github.com/KevinsDeveloper/bootstrap4-admin",
   "author": "Start Bootstrap",
   "license": {
     "type": "MIT",

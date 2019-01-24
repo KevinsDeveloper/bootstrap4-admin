@@ -36,7 +36,7 @@ gulp.task('css', function () {
         'vendor/metisMenu/metisMenu.min.css', 
         'vendor/morrisjs/morris.css',
         'vendor/font-awesome/css/font-awesome.min.css', 
-        'vendor/layer/theme/default/layer.css'
+        'vendor/layer/theme/default/layer.css',
         ])
         .pipe(concat('extend.css'))
         //.pipe(uglify())
@@ -70,14 +70,21 @@ gulp.task('js', function () {
         }))
 })
 
+gulp.task('module-js', function () {
+    return gulp.src(['js/module/*.js'])
+        .pipe(uglify())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(gulp.dest('dist/js/module'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+})
+
 gulp.task('base-js', function () {
     return gulp.src([
-        'vendor/metisMenu/metisMenu.js', 
-        // 'vendor/raphael/raphael.min.js',
-        // 'vendor/morrisjs/morris.min.js',
+        'vendor/metisMenu/metisMenu.js',
         'vendor/layer/layer.js', 
         'js/base.js',
-        // 'data/morris-data.js'
         ])
         .pipe(concat('base.js'))
         .pipe(uglify())
@@ -155,7 +162,7 @@ gulp.task('browserSync', function () {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'css', 'minify-css', 'js', 'base-js', 'minify-js'], function () {
+gulp.task('dev', ['browserSync', 'less', 'css', 'minify-css', 'js', 'base-js', 'minify-js', 'module-js'], function () {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('dist/css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);

@@ -11,6 +11,19 @@ body a {color: #292d32;}
 body a:hover, body a:focus {color: #337ab7;}
 // Wrappers
 
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+
 #wrapper {
   width: 100%;
   overflow-x: hidden;
@@ -20,10 +33,10 @@ body a:hover, body a:focus {color: #337ab7;}
   //min-height: 780px;
   background-color: white;
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   #page-wrapper {
     position: inherit;
-    margin: 0 0 0 240px;
+    margin: 0 0 0 220px;
     padding: 0 10px;
     border-left: 1px solid darken(@gray-lightest, 6.5%);
   }
@@ -139,7 +152,7 @@ body a:hover, body a:focus {color: #337ab7;}
   .sidebar {
     z-index: 1;
     position: absolute;
-    width: 240px;
+    width: 220px;
     margin-top: 51px;
   }
   .navbar-top-links .dropdown-messages,
@@ -1274,7 +1287,7 @@ table.dataTable thead .sorting:after {
   background-color: #1b1e21;
   border-color: #1b1e21;
 }
-.close, .mailbox-attachment-close {
+.mailbox-attachment-close {
   float: right;
   font-size: 1.5rem;
   font-weight: 700;
@@ -1282,6 +1295,16 @@ table.dataTable thead .sorting:after {
   color: #000;
   text-shadow: 0 1px 0 #ffffff;
   opacity: .5;
+}
+.close {
+  position: absolute;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: .5;
+  top: 10px;
+  right: 10px;
 }
 .close:hover, .mailbox-attachment-close:hover, .close:focus, .mailbox-attachment-close:focus {
   color: #000;
@@ -1299,6 +1322,7 @@ button.close, button.mailbox-attachment-close {
 }
 .modal-open {
   overflow: hidden;
+  background-color: #f3f3f4;
 }
 .modal {
   position: fixed;
@@ -1361,7 +1385,7 @@ button.close, button.mailbox-attachment-close {
   background-color: #000;
 }
 .modal-backdrop.fade {
-  opacity: 0;
+  opacity: 0.5;
 }
 .modal-backdrop.show {
   opacity: 0.5;
@@ -4263,4 +4287,49 @@ a.text-muted:hover {
 }
 .elevation-5 {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.modal-content {
+  background-clip: padding-box;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  outline: 0 none;
+}
+
+.modal-dialog {
+  z-index: 1200;
+}
+
+.modal-body {
+  padding: 20px 30px 30px 30px;
+}
+
+.inmodal .modal-body {
+  background: #f8fafb;
+}
+
+.inmodal .modal-header {
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.animated.modal.fade .modal-dialog {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.inmodal .modal-title {
+  font-size: 26px;
+}
+
+.inmodal .modal-icon {
+  font-size: 84px;
+  color: #e2e3e3;
+}
+
+.modal-footer {
+  margin-top: 0;
 }
